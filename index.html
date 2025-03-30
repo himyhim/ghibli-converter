@@ -1,19 +1,19 @@
-#### **HTML Code** (Paste into `index.html`):
-```html
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Free Ghibli Art Converter</title>
+  <title>Ghibli Art Converter</title>
   <style>
-    body { text-align: center; padding: 20px; }
-    iframe { width: 100%; height: 600px; border: none; }
+    body { text-align: center; padding: 20px; font-family: Arial; }
+    #output { max-width: 500px; margin: 20px auto; }
+    .loader { width: 50px; display: none; }
   </style>
 </head>
 <body>
   <h1>Turn Your Photo into Ghibli Art! 🌿</h1>
-  <p>Upload your image below (we don’t store anything!):</p>
-  <!-- Embed a free AI tool -->
-  <iframe src="https://huggingface.co/spaces/AP123/Ghibli-Diffusion"></iframe>
+  <input type="file" id="upload" accept="image/*">
+  <br>
+  <img src="" id="output" alt="Converted Image">
+  <img src="https://i.gifer.com/ZZ5H.gif" class="loader" id="loader">
+  <script src="script.js"></script>
 </body>
 </html>
-```
